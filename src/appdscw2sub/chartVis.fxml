@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="" fx:id="AnchorPane1" prefHeight="1118.0" prefWidth="1759.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appdscw2sub.CwController">
+    <children>
+        <AnchorPane fx:id="loadingScreen" prefHeight="1117.0" prefWidth="1760.0" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ProgressBar fx:id="progressData" layoutX="462.0" layoutY="506.0" prefHeight="66.0" prefWidth="881.0" progress="0.0" />
+                <Label fx:id="statusL" alignment="CENTER" contentDisplay="CENTER" layoutX="500.0" layoutY="510.0" prefHeight="58.0" prefWidth="835.0" text="Establishing Connection..." textAlignment="CENTER">
+                    <font>
+                        <Font size="44.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <VBox fx:id="mainLayer" layoutX="-2.0" layoutY="-3.0" prefHeight="1079.0" prefWidth="1763.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="-3.0">
+            <children>
+                <BorderPane prefHeight="77.0" prefWidth="1763.0" />
+                <AnchorPane prefHeight="61.0" prefWidth="1763.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="696.0" layoutY="1.0" prefHeight="23.0" prefWidth="397.0" styleClass="title-label" text="Car Sales Dashboard" textAlignment="CENTER">
+                            <font>
+                                <Font size="45.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <BorderPane prefHeight="77.0" prefWidth="1763.0" />
+                <AnchorPane prefHeight="124.0" prefWidth="1763.0">
+                    <children>
+                        <Label fx:id="dateL" alignment="TOP_CENTER" layoutX="696.0" layoutY="3.0" prefHeight="61.0" prefWidth="397.0" styleClass="date-label" text="wd" textAlignment="CENTER">
+                            <font>
+                                <Font size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            <BorderPane prefHeight="77.0" prefWidth="1763.0" />
+                <HBox prefHeight="279.0" prefWidth="1763.0">
+                    <children>
+                        <BorderPane prefHeight="145.0" prefWidth="299.0" />
+                        <TableView fx:id="barTable" prefHeight="160.0" prefWidth="518.0">
+                            <columns>
+                                <TableColumn fx:id="BT1" prefWidth="225.0" text="Quarter" />
+                                <TableColumn fx:id="BT2" prefWidth="225.0" text="Quantity" />
+                            </columns>
+                        </TableView>
+                        <BorderPane prefHeight="160.0" prefWidth="276.0" />
+                        <TableView fx:id="lineTable" prefHeight="160.0" prefWidth="713.0">
+                            <columns>
+                                <TableColumn fx:id="LT1" prefWidth="225.0" text="Vehicle" />
+                                <TableColumn fx:id="LT2" prefWidth="225.0" text="Year" />
+                                <TableColumn fx:id="LT3" prefWidth="225.0" text="Quantity" />
+                            </columns>
+                        </TableView>
+                        <BorderPane prefHeight="160.0" prefWidth="90.0" />
+                    </children>
+                </HBox>
+                <BorderPane prefHeight="90.0" prefWidth="1763.0" />
+                <BorderPane prefHeight="54.0" prefWidth="1763.0" />
+                <HBox prefHeight="490.0" prefWidth="1763.0">
+                    <children>
+                        <BorderPane prefHeight="604.0" prefWidth="168.0" />
+                        <VBox prefHeight="604.0" prefWidth="960.0">
+                            <children>
+                                <BarChart fx:id="bChart" animated="false" barGap="0.0" prefHeight="613.0" prefWidth="850.0" scaleShape="false" styleClass="bar-chart" stylesheets="@Custom.css">
+                                    <xAxis>
+                                        <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis fx:id="yAxis" side="LEFT" />
+                                    </yAxis>
+                                </BarChart>
+                                <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="23.0" prefWidth="1763.0">
+                                    <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                                    </items>
+                                </SplitPane>
+                                <PieChart fx:id="pChart1" prefHeight="570.0" prefWidth="319.0" />
+                            </children>
+                        </VBox>
+                        <BorderPane prefHeight="604.0" prefWidth="100.0" />
+                        <LineChart fx:id="lineChart" animated="false" prefHeight="604.0" prefWidth="928.0">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" />
+                            </yAxis>
+                        </LineChart>
+                        <BorderPane prefHeight="604.0" prefWidth="149.0" />
+                    </children>
+                </HBox>
+                <BorderPane prefHeight="77.0" prefWidth="1763.0" />
+                <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="23.0" prefWidth="1763.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                    </items>
+                </SplitPane>
+                <HBox prefHeight="225.0" prefWidth="1763.0">
+                    <children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="184.0" prefWidth="1026.0">
+                            <children>
+                                <Label layoutX="50.0" layoutY="46.0" text="Region">
+                                    <font>
+                                        <Font size="21.0" />
+                                    </font>
+                                </Label>
+                                <ChoiceBox fx:id="regi" layoutX="51.0" layoutY="76.0" prefWidth="150.0" />
+                                <Label layoutX="275.0" layoutY="46.0" text="Vehicle">
+                                    <font>
+                                        <Font size="21.0" />
+                                    </font>
+                                </Label>
+                                <ChoiceBox fx:id="veh" layoutX="277.0" layoutY="76.0" prefWidth="150.0" />
+                                <Label layoutX="500.0" layoutY="47.0" text="Year">
+                                    <font>
+                                        <Font size="21.0" />
+                                    </font>
+                                </Label>
+                                <ChoiceBox fx:id="yea" layoutX="503.0" layoutY="76.0" prefWidth="150.0" />
+                                <Button fx:id="resetF" layoutX="825.0" layoutY="76.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Reset Filters" />
+                                <Button fx:id="appFil" layoutX="700.0" layoutY="76.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Apply Filters" />
+                            </children>
+                        </AnchorPane>
+                        <SplitPane dividerPositions="0.29797979797979796" prefHeight="162.0" prefWidth="29.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="0.0" />
+                            </items>
+                        </SplitPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="162.0" prefWidth="790.0">
+                            <children>
+                                <ChoiceBox fx:id="sQtr" disable="true" layoutX="402.0" layoutY="48.0" prefWidth="150.0" />
+                                <Label layoutX="55.0" layoutY="13.0" text="Settings">
+                                    <font>
+                                        <Font size="21.0" />
+                                    </font>
+                                </Label>
+                                <CheckBox fx:id="enableQTR" layoutX="59.0" layoutY="48.0" mnemonicParsing="false" text="Enable Quarter Insight">
+                                    <font>
+                                        <Font size="17.0" />
+                                    </font>
+                                </CheckBox>
+                                <Label layoutX="401.0" layoutY="13.0" text="Select Quarter:">
+                                    <font>
+                                        <Font size="21.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

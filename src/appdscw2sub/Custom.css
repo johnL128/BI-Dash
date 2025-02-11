@@ -1,0 +1,49 @@
+/*global font*/
+* {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-base: #f4f4f4;
+    -fx-text-fill: #333;
+}
+
+.title-label {
+    -fx-font-size: 65px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-text-alignment: center;
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #061d43;
+    -fx-border-width: 2px;
+}
+
+.date-label {
+    -fx-font-size: 65px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-text-alignment: center;
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #061d43;
+    -fx-border-width: 2px;
+}
+
+
+.button {
+    -fx-background-color: #061d43;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-background-color: #2ad4c3;
+}
+
+
+.progress-bar {
+    -fx-accent: #2ad4c3;
+}
