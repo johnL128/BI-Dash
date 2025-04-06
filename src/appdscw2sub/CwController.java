@@ -105,7 +105,7 @@ public class CwController implements Initializable {
         backUp = new BackUp("SGetSales.JSON");
 
         webService = new webService(statusL);
-        webService.setAddress("https://webteach.ljmu.ac.uk/DashService/SGetSales");
+        webService.setAddress("URL JSON Link");
 
         loadingScreen.visibleProperty().bind(progressData.progressProperty().lessThan(1));
         mainLayer.visibleProperty().bind(progressData.progressProperty().isEqualTo(1));
